@@ -1,0 +1,56 @@
+{
+  "name": "referral-program-skill",
+  "version": "1.0.0",
+  "description": "Design, simulate, and optimize customer referral programs with reward structures, viral coefficient calculations, and ROI projections.",
+  "author": "alphaparkinc",
+  "category": "growth",
+  "tags": [
+    "referral",
+    "growth",
+    "viral",
+    "word-of-mouth",
+    "retention"
+  ],
+  "inputs": {
+    "avg_order_value": {
+      "type": "number",
+      "description": "Average order value in USD."
+    },
+    "customer_acquisition_cost": {
+      "type": "number",
+      "description": "Current CAC in USD."
+    },
+    "referrer_reward": {
+      "type": "object",
+      "description": "Reward for referrer: {type: 'cash'|'credit'|'discount', value: number}."
+    },
+    "referee_reward": {
+      "type": "object",
+      "description": "Reward for new customer: {type: 'cash'|'credit'|'discount', value: number}."
+    },
+    "current_customers": {
+      "type": "integer",
+      "description": "Number of active customers."
+    }
+  },
+  "outputs": {
+    "viral_coefficient": {
+      "type": "number",
+      "description": "Estimated viral coefficient (K-factor)."
+    },
+    "program_roi": {
+      "type": "object",
+      "description": "ROI projection over 12 months."
+    },
+    "growth_simulation": {
+      "type": "array",
+      "description": "Month-by-month customer growth simulation."
+    },
+    "recommendations": {
+      "type": "array",
+      "description": "Program design recommendations."
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
